@@ -1,8 +1,14 @@
-<p>Look for qualified this usages in the same class.</p>
+<p>取反逻辑不利于快速理解，并且取反逻辑写法必然存在对应的正向逻辑写法</p>
 <p>Examples:</p>
 <pre>
-    Negative example:
-    SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-    Positive example:
-    SimpleDateFormat format = new SimpleDateFormat("YYYY-mm-dd HH:mm:ss");
+   Negative example:
+    // Use `if (!(x >= 628))` to represent that x is less than 628.
+    if (!(x >= 628)) {
+        // ...
+    }
+   Positive example:
+    // Use `if (x < 628)` to represent that x is less than 628.
+    if (x < 628)) {
+        // ...
+    }
 </pre>

@@ -98,6 +98,10 @@
     <priority>MAJOR</priority>
     <configKey><![CDATA[rulesets/java/ali-flowcontrol.xml/AvoidComplexConditionRule]]></configKey>
   </rule>
+  <rule key="AvoidNegationOperatorRule">
+    <priority>MAJOR</priority>
+    <configKey><![CDATA[rulesets/java/ali-flowcontrol.xml/AvoidNegationOperatorRule]]></configKey>
+  </rule>
 
   <!--AlibabaJavaNaming-->
   <rule key="ClassNamingShouldBeCamelRule">
@@ -170,6 +174,10 @@
     <priority>MAJOR</priority>
     <configKey><![CDATA[rulesets/java/ali-oop.xml/PojoMustOverrideToStringRule]]></configKey>
   </rule>
+  <rule key="BigDecimalAvoidDoubleConstructorRule">
+    <priority>MAJOR</priority>
+    <configKey><![CDATA[rulesets/java/ali-oop.xml/BigDecimalAvoidDoubleConstructorRule]]></configKey>
+  </rule>
 
   <!--AlibabaJavaOrm-->
   <rule key="IbatisMethodQueryForListRule">
@@ -193,6 +201,18 @@
   <rule key="AvoidMissUseOfMathRandomRule">
     <priority>MAJOR</priority>
     <configKey><![CDATA[rulesets/java/ali-other.xml/AvoidMissUseOfMathRandomRule]]></configKey>
+  </rule>
+  <rule key="MethodTooLongRule">
+    <priority>MAJOR</priority>
+    <configKey><![CDATA[rulesets/java/ali-other.xml/MethodTooLongRule]]></configKey>
+  </rule>
+  <rule key="UseRightCaseForDateFormatRule">
+    <priority>MAJOR</priority>
+    <configKey><![CDATA[rulesets/java/ali-other.xml/UseRightCaseForDateFormatRule]]></configKey>
+  </rule>
+  <rule key="AvoidDoubleOrFloatEqualCompareRule">
+    <priority>MAJOR</priority>
+    <configKey><![CDATA[rulesets/java/ali-other.xml/AvoidDoubleOrFloatEqualCompareRule]]></configKey>
   </rule>
 
   <!--AlibabaJavaSets-->

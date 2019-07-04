@@ -300,6 +300,19 @@
           <txt>min</txt>
         </prop>
       </chc>
+      <chc>
+        <rule-repo>pmd</rule-repo>
+        <rule-key>AvoidNegationOperatorRule</rule-key>
+        <prop>
+          <key>remediationFunction</key>
+          <txt>CONSTANT_ISSUE</txt>
+        </prop>
+        <prop>
+          <key>offset</key>
+          <val>2</val>
+          <txt>min</txt>
+        </prop>
+      </chc>
 
       <!--AlibabaJavaNaming-->
       <chc>
@@ -526,6 +539,19 @@
           <txt>min</txt>
         </prop>
       </chc>
+      <chc>
+        <rule-repo>pmd</rule-repo>
+        <rule-key>BigDecimalAvoidDoubleConstructorRule</rule-key>
+        <prop>
+          <key>remediationFunction</key>
+          <txt>CONSTANT_ISSUE</txt>
+        </prop>
+        <prop>
+          <key>offset</key>
+          <val>2</val>
+          <txt>min</txt>
+        </prop>
+      </chc>
 
       <!--AlibabaJavaOrm-->
       <chc>
@@ -585,6 +611,45 @@
       <chc>
         <rule-repo>pmd</rule-repo>
         <rule-key>AvoidMissUseOfMathRandomRule</rule-key>
+        <prop>
+          <key>remediationFunction</key>
+          <txt>CONSTANT_ISSUE</txt>
+        </prop>
+        <prop>
+          <key>offset</key>
+          <val>2</val>
+          <txt>min</txt>
+        </prop>
+      </chc>
+      <chc>
+        <rule-repo>pmd</rule-repo>
+        <rule-key>MethodTooLongRule</rule-key>
+        <prop>
+          <key>remediationFunction</key>
+          <txt>CONSTANT_ISSUE</txt>
+        </prop>
+        <prop>
+          <key>offset</key>
+          <val>2</val>
+          <txt>min</txt>
+        </prop>
+      </chc>
+      <chc>
+        <rule-repo>pmd</rule-repo>
+        <rule-key>UseRightCaseForDateFormatRule</rule-key>
+        <prop>
+          <key>remediationFunction</key>
+          <txt>CONSTANT_ISSUE</txt>
+        </prop>
+        <prop>
+          <key>offset</key>
+          <val>2</val>
+          <txt>min</txt>
+        </prop>
+      </chc>
+      <chc>
+        <rule-repo>pmd</rule-repo>
+        <rule-key>AvoidDoubleOrFloatEqualCompareRule</rule-key>
         <prop>
           <key>remediationFunction</key>
           <txt>CONSTANT_ISSUE</txt>
