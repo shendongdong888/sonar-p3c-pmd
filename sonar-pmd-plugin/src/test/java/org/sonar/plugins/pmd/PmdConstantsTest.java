@@ -30,7 +30,7 @@ class PmdConstantsTest {
         assertThat(PmdConstants.PLUGIN_NAME).isEqualTo("PMD");
         assertThat(PmdConstants.PLUGIN_KEY).isEqualTo("pmd");
         assertThat(PmdConstants.REPOSITORY_KEY).isEqualTo("pmd");
-        assertThat(PmdConstants.REPOSITORY_NAME).isEqualTo("PMD");
+        assertThat(PmdConstants.REPOSITORY_NAME).isEqualTo("PMD_ALIBABA");
         assertThat(PmdConstants.TEST_REPOSITORY_KEY).isEqualTo("pmd-unit-tests");
         assertThat(PmdConstants.TEST_REPOSITORY_NAME).isEqualTo("PMD Unit Tests");
         assertThat(PmdConstants.XPATH_CLASS).isEqualTo("net.sourceforge.pmd.lang.rule.XPathRule");
