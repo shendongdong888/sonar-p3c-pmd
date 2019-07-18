@@ -2,18 +2,18 @@
 <p>请不要在finally中使用return</p>
 <p>Examples:</p>
 <pre>
-    Negative example:
-    public static Long readFileLength(String fileName) {
-        try {
-            File file = new File(fileName);
-            RandomAccessFile randomAccessFile = new RandomAccessFile(file, "r");
-            return randomAccessFile.length();
-        } catch (Exception e) {
-            logger.error(e.getMessage(), e);
-        } finally {
-            countDownLatch.countDown();
-            return 0L;
-        }
+    Negative example:<br>
+    public static Long readFileLength(String fileName) {<br>
+        try {<br>
+            File file = new File(fileName);<br>
+            RandomAccessFile randomAccessFile = new RandomAccessFile(file, "r");<br>
+            return randomAccessFile.length();<br>
+        } catch (Exception e) {<br>
+            logger.error(e.getMessage(), e);<br>
+        } finally {<br>
+            countDownLatch.countDown();<br>
+            return 0L;<br>
+        }<br>
     }
 </pre>
 

@@ -16,6 +16,7 @@
   </rule>
   <rule key="EnumConstantsMustHaveCommentRule">
     <priority>CRITICAL</priority>
+    <tag>security</tag>
     <configKey><![CDATA[rulesets/java/ali-comment.xml/EnumConstantsMustHaveCommentRule]]></configKey>
   </rule>
   <rule key="AvoidCommentBehindStatementRule">
@@ -30,26 +31,32 @@
   <!--AlibabaJavaConcurrent-->
   <rule key="ThreadPoolCreationRule">
     <priority>BLOCKER</priority>
+    <tag>bug</tag>
     <configKey><![CDATA[rulesets/java/ali-concurrent.xml/ThreadPoolCreationRule]]></configKey>
   </rule>
   <rule key="AvoidUseTimerRule">
     <priority>BLOCKER</priority>
+    <tag>bug</tag>
     <configKey><![CDATA[rulesets/java/ali-concurrent.xml/AvoidUseTimerRule]]></configKey>
   </rule>
   <rule key="AvoidManuallyCreateThreadRule">
     <priority>CRITICAL</priority>
+    <tag>security</tag>
     <configKey><![CDATA[rulesets/java/ali-concurrent.xml/AvoidManuallyCreateThreadRule]]></configKey>
   </rule>
   <rule key="ThreadShouldSetNameRule">
     <priority>CRITICAL</priority>
+    <tag>security</tag>
     <configKey><![CDATA[rulesets/java/ali-concurrent.xml/ThreadShouldSetNameRule]]></configKey>
   </rule>
   <rule key="AvoidCallStaticSimpleDateFormatRule">
     <priority>CRITICAL</priority>
+    <tag>security</tag>
     <configKey><![CDATA[rulesets/java/ali-concurrent.xml/AvoidCallStaticSimpleDateFormatRule]]></configKey>
   </rule>
   <rule key="ThreadLocalShouldRemoveRule">
     <priority>CRITICAL</priority>
+    <tag>security</tag>
     <configKey><![CDATA[rulesets/java/ali-concurrent.xml/ThreadLocalShouldRemoveRule]]></configKey>
   </rule>
   <rule key="AvoidConcurrentCompetitionRandomRule">
@@ -64,6 +71,7 @@
   <!--AlibabaJavaConstants-->
   <rule key="UpperEllRule">
     <priority>BLOCKER</priority>
+    <tag>bug</tag>
     <configKey><![CDATA[rulesets/java/ali-constant.xml/UpperEllRule]]></configKey>
   </rule>
   <rule key="UndefineMagicConstantRule">
@@ -78,6 +86,7 @@
   </rule>
   <rule key="AvoidReturnInFinallyRule">
     <priority>CRITICAL</priority>
+    <tag>security</tag>
     <configKey><![CDATA[rulesets/java/ali-exception.xml/AvoidReturnInFinallyRule]]></configKey>
   </rule>
   <rule key="TransactionMustHaveRollbackRule">
@@ -88,6 +97,7 @@
   <!--AlibabaJavaFlowControl-->
   <rule key="SwitchStatementRule">
     <priority>CRITICAL</priority>
+    <tag>security</tag>
     <configKey><![CDATA[rulesets/java/ali-flowcontrol.xml/SwitchStatementRule]]></configKey>
   </rule>
   <rule key="NeedBraceRule">
@@ -110,10 +120,12 @@
   </rule>
   <rule key="AbstractClassShouldStartWithAbstractNamingRule">
     <priority>CRITICAL</priority>
+    <tag>security</tag>
     <configKey><![CDATA[rulesets/java/ali-naming.xml/AbstractClassShouldStartWithAbstractNamingRule]]></configKey>
   </rule>
   <rule key="ExceptionClassShouldEndWithExceptionRule">
     <priority>CRITICAL</priority>
+    <tag>security</tag>
     <configKey><![CDATA[rulesets/java/ali-naming.xml/ExceptionClassShouldEndWithExceptionRule]]></configKey>
   </rule>
   <rule key="TestClassShouldEndWithTestNamingRule">
@@ -122,18 +134,22 @@
   </rule>
   <rule key="LowerCamelCaseVariableNamingRule">
     <priority>CRITICAL</priority>
+    <tag>security</tag>
     <configKey><![CDATA[rulesets/java/ali-naming.xml/LowerCamelCaseVariableNamingRule]]></configKey>
   </rule>
   <rule key="AvoidStartWithDollarAndUnderLineNamingRule">
     <priority>CRITICAL</priority>
+    <tag>security</tag>
     <configKey><![CDATA[rulesets/java/ali-naming.xml/AvoidStartWithDollarAndUnderLineNamingRule]]></configKey>
   </rule>
   <rule key="ConstantFieldShouldBeUpperCaseRule">
     <priority>CRITICAL</priority>
+    <tag>security</tag>
     <configKey><![CDATA[rulesets/java/ali-naming.xml/ConstantFieldShouldBeUpperCaseRule]]></configKey>
   </rule>
   <rule key="ServiceOrDaoClassShouldEndWithImplRule">
     <priority>CRITICAL</priority>
+    <tag>security</tag>
     <configKey><![CDATA[rulesets/java/ali-naming.xml/ServiceOrDaoClassShouldEndWithImplRule]]></configKey>
   </rule>
   <rule key="PackageNamingRule">
@@ -142,6 +158,7 @@
   </rule>
   <rule key="BooleanPropertyShouldNotStartWithIsRule">
     <priority>CRITICAL</priority>
+    <tag>security</tag>
     <configKey><![CDATA[rulesets/java/ali-naming.xml/BooleanPropertyShouldNotStartWithIsRule]]></configKey>
   </rule>
   <rule key="ArrayNamingShouldHaveBracketRule">
@@ -152,10 +169,12 @@
   <!--AlibabaJavaOop-->
   <rule key="EqualsAvoidNullRule">
     <priority>CRITICAL</priority>
+    <tag>security</tag>
     <configKey><![CDATA[rulesets/java/ali-oop.xml/EqualsAvoidNullRule]]></configKey>
   </rule>
   <rule key="WrapperTypeEqualityRule">
     <priority>BLOCKER</priority>
+    <tag>bug</tag>
     <configKey><![CDATA[rulesets/java/ali-oop.xml/WrapperTypeEqualityRule]]></configKey>
   </rule>
   <rule key="PojoMustUsePrimitiveFieldRule">
@@ -188,14 +207,17 @@
   <!--AlibabaJavaOthers-->
   <rule key="AvoidPatternCompileInMethodRule">
     <priority>BLOCKER</priority>
+    <tag>bug</tag>
     <configKey><![CDATA[rulesets/java/ali-other.xml/AvoidPatternCompileInMethodRule]]></configKey>
   </rule>
   <rule key="AvoidApacheBeanUtilsCopyRule">
     <priority>BLOCKER</priority>
+    <tag>bug</tag>
     <configKey><![CDATA[rulesets/java/ali-other.xml/AvoidApacheBeanUtilsCopyRule]]></configKey>
   </rule>
   <rule key="AvoidNewDateGetTimeRule">
     <priority>BLOCKER</priority>
+    <tag>bug</tag>
     <configKey><![CDATA[rulesets/java/ali-other.xml/AvoidNewDateGetTimeRule]]></configKey>
   </rule>
   <rule key="AvoidMissUseOfMathRandomRule">
@@ -218,22 +240,27 @@
   <!--AlibabaJavaSets-->
   <rule key="ClassCastExceptionWithToArrayRule">
     <priority>CRITICAL</priority>
+    <tag>security</tag>
     <configKey><![CDATA[rulesets/java/ali-set.xml/ClassCastExceptionWithToArrayRule]]></configKey>
   </rule>
   <rule key="UnsupportedExceptionWithModifyAsListRule">
     <priority>CRITICAL</priority>
+    <tag>security</tag>
     <configKey><![CDATA[rulesets/java/ali-set.xml/UnsupportedExceptionWithModifyAsListRule]]></configKey>
   </rule>
   <rule key="ClassCastExceptionWithSubListToArrayListRule">
     <priority>CRITICAL</priority>
+    <tag>security</tag>
     <configKey><![CDATA[rulesets/java/ali-set.xml/ClassCastExceptionWithSubListToArrayListRule]]></configKey>
   </rule>
   <rule key="ConcurrentExceptionWithModifyOriginSubListRule">
     <priority>CRITICAL</priority>
+    <tag>security</tag>
     <configKey><![CDATA[rulesets/java/ali-set.xml/ConcurrentExceptionWithModifyOriginSubListRule]]></configKey>
   </rule>
   <rule key="DontModifyInForeachCircleRule">
     <priority>BLOCKER</priority>
+    <tag>bug</tag>
     <configKey><![CDATA[rulesets/java/ali-set.xml/DontModifyInForeachCircleRule]]></configKey>
   </rule>
   <rule key="CollectionInitShouldAssignCapacityRule">

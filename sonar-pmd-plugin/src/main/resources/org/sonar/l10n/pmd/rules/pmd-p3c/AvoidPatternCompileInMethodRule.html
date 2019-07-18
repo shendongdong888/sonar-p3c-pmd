@@ -2,13 +2,15 @@
 <p>说明：不要在方法体内定义：Pattern pattern = Pattern.compile(规则);</p>
 <p>Examples:</p>
 <pre>
-    public class XxxClass {
+    public class XxxClass { <br>
         // Use precompile
-        private static Pattern NUMBER_PATTERN = Pattern.compile("[0-9]+");
-        public Pattern getNumberPattern() {
+  <br>
+        private static Pattern NUMBER_PATTERN = Pattern.compile("[0-9]+");<br>
+        public Pattern getNumberPattern() {<br>
             // Avoid use Pattern.compile in method body.
-            Pattern localPattern = Pattern.compile("[0-9]+");
-            return localPattern;
-        }
+  <br>
+            Pattern localPattern = Pattern.compile("[0-9]+");<br>
+            return localPattern;<br>
+        }<br>
     }
 </pre>

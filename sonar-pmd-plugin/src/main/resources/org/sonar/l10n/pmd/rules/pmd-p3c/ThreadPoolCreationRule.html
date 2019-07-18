@@ -6,33 +6,33 @@
   主要问题是线程数最大数是Integer.MAX_VALUE，可能会创建数量非常多的线程，甚至OOM。</p>
 <p>Examples:</p>
 <pre>
-    Positive example 1：
-    //org.apache.commons.lang3.concurrent.BasicThreadFactory
-    ScheduledExecutorService executorService = new ScheduledThreadPoolExecutor(1,
-        new BasicThreadFactory.Builder().namingPattern("example-schedule-pool-%d").daemon(true).build());
-Positive example 2：
-    ThreadFactory namedThreadFactory = new ThreadFactoryBuilder()
-        .setNameFormat("demo-pool-%d").build();
+    Positive example 1：<br>
+        //org.apache.commons.lang3.concurrent.BasicThreadFactory<br>
+        ScheduledExecutorService executorService = new ScheduledThreadPoolExecutor(1,<br>
+            new BasicThreadFactory.Builder().namingPattern("example-schedule-pool-%d").daemon(true).build());<br><br>
+    Positive example 2：<br>
+        ThreadFactory namedThreadFactory = new ThreadFactoryBuilder()<br>
+            .setNameFormat("demo-pool-%d").build();<br>
+<br>
+        //Common Thread Pool<br>
+        ExecutorService pool = new ThreadPoolExecutor(5, 200,<br>
+            0L, TimeUnit.MILLISECONDS,<br>
+            new LinkedBlockingQueue &lt;Runnable&gt;(1024), namedThreadFactory, new ThreadPoolExecutor.AbortPolicy());<br>
+<br>
+        pool.execute(()-> System.out.println(Thread.currentThread().getName()));<br>
+        pool.shutdown();//gracefully shutdown<br><br>
+    Positive example 3：<br>
+        &lt;bean id="userThreadPool"<br>
+            class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor"&gt;<br>
+            &lt;property name="corePoolSize" value="10" /&gt;<br>
+            &lt;property name="maxPoolSize" value="100" /&gt;<br>
+            &lt;property name="queueCapacity" value="2000" /&gt;<br>
 
-    //Common Thread Pool
-    ExecutorService pool = new ThreadPoolExecutor(5, 200,
-        0L, TimeUnit.MILLISECONDS,
-        new LinkedBlockingQueue<Runnable>(1024), namedThreadFactory, new ThreadPoolExecutor.AbortPolicy());
-
-    pool.execute(()-> System.out.println(Thread.currentThread().getName()));
-    pool.shutdown();//gracefully shutdown
-Positive example 3：
-    <bean id="userThreadPool"
-        class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
-        <property name="corePoolSize" value="10" />
-        <property name="maxPoolSize" value="100" />
-        <property name="queueCapacity" value="2000" />
-
-    <property name="threadFactory" value= threadFactory />
-        <property name="rejectedExecutionHandler">
-            <ref local="rejectedExecutionHandler" />
-        </property>
-    </bean>
-    //in code
-    userThreadPool.execute(thread);
+        &lt;property name="threadFactory" value= threadFactory /&gt;<br>
+            &lt;property name="rejectedExecutionHandler"&gt;<br>
+                &lt;ref local="rejectedExecutionHandler" /&gt;<br>
+            &lt;/property&gt;<br>
+        <&lt;/bean&gt;<br>
+        //in code<br>
+        userThreadPool.execute(thread);<br>
 </pre>

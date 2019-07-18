@@ -2,11 +2,15 @@
 <p>说明:禁止强转，如果需要用到集合特性方法，请新建一个集合，然后置入sublist,new 集合(sublist结果)。</p>
 <p>Examples:</p>
 <pre>
-    Negative example:
-   List<String> list = new ArrayList<String>();
-   list.add("22");
-   //warn
-   List<String> test = (ArrayList<String>) list.subList(0, 1);
-	Positive example:
-	   List<String> list2 = new ArrayList<String>(list.subList(0, 1));
+  Negative example:<br>
+     List&lt;String&gt; list = new ArrayList&lt;String&gt;();<br>
+     list.add("22");<br>
+    //warn
+  <br>
+     List&lt;String&gt; test = (ArrayList&lt;String&gt;) list.subList(0, 1);<br>
+
+  Positive example:<br><br>
+     List&lt;String&gt; list2 = new ArrayList&lt;String&gt;(list.subList(0, 1));<br>
 </pre>
+
+

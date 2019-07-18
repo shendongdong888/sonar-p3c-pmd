@@ -2,19 +2,19 @@
 <p>说明：注意，子线程抛出异常堆栈，不能在主线程try-catch到。</p>
 <p>Examples:</p>
 <pre>
-    /**
-     * @author caikang
-     * @date 2017/04/07
-     */
-    public class CountDownExample {
-        public void operate(CountDownLatch countDownLatch){
-            try{
-                System.out.println("business logic");
-            }catch (RuntimeException e){
-                // do something
-            }finally {
-                countDownLatch.countDown();
-            }
-        }
-    }
+    /**<br>
+     * @author caikang<br>
+     * @date 2017/04/07<br>
+     */<br>
+    public class CountDownExample {<br>
+        public void operate(CountDownLatch countDownLatch){<br>
+            try{<br>
+                System.out.println("business logic");<br>
+            }catch (RuntimeException e){<br>
+                // do something<br>
+            }finally {<br>
+                countDownLatch.countDown();<br>
+            }<br>
+        }<br>
+    }<br>
 </pre>

@@ -3,12 +3,12 @@
 </p>
 <p>Examples:</p>
 <pre>
-	ThreadFactory namedThreadFactory = new ThreadFactoryBuilder()
-        .setNameFormat("demo-pool-%d").build();
-    ExecutorService singleThreadPool = new ThreadPoolExecutor(1, 1,
-        0L, TimeUnit.MILLISECONDS,
-        new LinkedBlockingQueue<Runnable>(1024), namedThreadFactory, new ThreadPoolExecutor.AbortPolicy());
-
-    singleThreadPool.execute(()-> System.out.println(Thread.currentThread().getName()));
-    singleThreadPool.shutdown();
+	ThreadFactory namedThreadFactory = new ThreadFactoryBuilder()<br>
+        .setNameFormat("demo-pool-%d").build();<br>
+    ExecutorService singleThreadPool = new ThreadPoolExecutor(1, 1,<br>
+        0L, TimeUnit.MILLISECONDS,<br>
+        new LinkedBlockingQueue&lt;Runnable&gt;(1024), namedThreadFactory, new ThreadPoolExecutor.AbortPolicy());<br>
+<br>
+    singleThreadPool.execute(()-> System.out.println(Thread.currentThread().getName()));<br>
+    singleThreadPool.shutdown();<br>
 </pre>
