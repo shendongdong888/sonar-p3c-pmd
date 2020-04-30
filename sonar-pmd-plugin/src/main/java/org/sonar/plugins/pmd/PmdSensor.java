@@ -67,10 +67,15 @@ public class PmdSensor implements Sensor {
 
     @Override
     public void execute(SensorContext context) {
-        if (shouldExecuteOnProject()) {
-            for (RuleViolation violation : executor.execute()) {
-                pmdViolationRecorder.saveViolation(violation, context);
+        try {
+            if (shouldExecuteOnProject()) {
+                for (RuleViolation violation : executor.execute()) {
+                    pmdViolationRecorder.saveViolation(violation, context);
+                }
             }
+        }catch (Exception e){
+            e.printStackTrace();
         }
+
     }
 }
